@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const inquirer = require('inquirer')
+import inquirer from 'inquirer'
 
 async function init() {
   const answers = await inquirer.prompt([
@@ -13,7 +13,6 @@ async function init() {
   ])
   console.log(`Project: ${answers.projectName}`)
   console.log(`Environment: ${answers.environment}`)
-  // Future steps: trigger Terraform, clone repo, etc.
 }
 
 init()
